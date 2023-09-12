@@ -1,5 +1,4 @@
 
-
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -10,7 +9,6 @@ backgroundImage.src = "collazrvt.png"; // hohoho
 backgroundImage.onload = () => {
     ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
 
-    // Draw the second rectangle (foreground)
     
 };
 
