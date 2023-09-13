@@ -5,6 +5,8 @@ const ctx = canvas.getContext("2d");
 const backgroundImage = new Image();
 backgroundImage.src = "collazrvt.png"; // hohoho
 
+let count = 0;
+
 // proverka, chto moi super-puper background zagruzilsya ezhi.
 backgroundImage.onload = () => {
     ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
@@ -18,6 +20,7 @@ function RandInteger(min, max) {
   }
 
 function drawRectangles() {
+    count++;
 
     // Tut ja takoi, ho-ho-ho, i delaju parametri randomnimi, chtobi vso bilo chotko i kazdij rectangle otlichalsa!
     let red = RandInteger(0, 255);
@@ -33,5 +36,7 @@ function drawRectangles() {
     // A tut on primenyaet eti parametri i risuet rectangle.
     ctx.fillStyle = `rgba(${red}, ${green}, ${blue}, 0.8)`;
     ctx.fillRect(x, y, width, height);
+
+    document.getElementById("count").innerHTML = count;
 
 }
